@@ -235,6 +235,7 @@ export default {
     border-color: rgb(0, 112, 243);
     border-image: initial;
     border-radius: 100%;
+    animation: myanimation 10s infinite;
 }
 
 .header > div {
