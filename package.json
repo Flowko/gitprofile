@@ -1,0 +1,22 @@
+{
+  "name": "vue-github-profile-search",
+  "version": "1.0.0",
+  "description": "Server with nodejs and express to get data from the github api",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm run serve --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "flowko",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4"
+  }
+}
