@@ -2,7 +2,7 @@
 
 A nicer look at your GitHub Profile! With charts!
 
-![demo](https://gitpro.herokuapp.com/static/og.png)
+![demo](https://camo.githubusercontent.com/15865d788a397c83182be816d46d67142229e3cb/68747470733a2f2f67697470726f2e6865726f6b756170702e636f6d2f7374617469632f6f672e706e67)
 
 [Check it Here](https://gitpro.herokuapp.com/)
 
