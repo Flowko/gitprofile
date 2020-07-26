@@ -4,7 +4,7 @@ A nicer look at your GitHub Profile! With charts!
 
 inspired from [Brittany Chiang](https://github.com/bchiang7)
 
-simailar to this project (octoprofile)[https://github.com/bchiang7/octoprofile] 
+simailar to this project [octoprofile](https://github.com/bchiang7/octoprofile) 
 
 but i created it from scratch using Vuejs :)
 
