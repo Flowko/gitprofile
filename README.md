@@ -8,7 +8,7 @@ simailar to this project [octoprofile](https://github.com/bchiang7/octoprofile)
 
 but its made with Vuejs/Nuxtjs :)
 
-![demo](![image](https://user-images.githubusercontent.com/35883748/162595202-9df7f30d-2503-4585-9fc8-7b8d48c72676.png))
+![demo](https://user-images.githubusercontent.com/35883748/162595202-9df7f30d-2503-4585-9fc8-7b8d48c72676.png)
 
 [Check it Here](https://gitpro.herokuapp.com/)
 
