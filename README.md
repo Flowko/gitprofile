@@ -14,7 +14,7 @@ but its made with Vuejs/Nuxtjs :)
 
 Built with:
 
-- [vSelect](https://vue-select.org/)
+- [Nuxtjs](https://nuxtjs.org/)
 - [Giuthub API](https://developer.github.com/v3/)
 - [Chart.js](https://www.chartjs.org/)
 
