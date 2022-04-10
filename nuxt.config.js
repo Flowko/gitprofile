@@ -43,6 +43,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     "@nuxtjs/fontawesome",
+    "@nuxtjs/toast",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -75,5 +76,10 @@ export default {
     display: "swap",
     prefetch: true,
     preconnect: true,
+  },
+
+  toast: {
+    position: "bottom-right",
+    duration: 2000,
   },
 };

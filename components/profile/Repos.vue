@@ -17,7 +17,7 @@
         class="grid max-w-lg gap-5 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none"
       >
         <a
-          v-for="(repo, index) in allRepos"
+          v-for="(repo, index) in paginated"
           :key="index"
           :href="repo.html_url"
           target="_blank"
@@ -52,6 +52,26 @@
           </div>
         </a>
       </div>
+      <div class="flex justify-center mt-12">
+        <div class="inline-flex">
+          <button
+            class="inline-flex items-center px-4 py-2 mr-4 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out border border-transparent rounded-md  bg-blueGray-700 hover:bg-blueGray-600 focus:outline-none focus:border-blueGray-700 focus:shadow-outline-blueGray active:bg-blueGray-700 disabled:opacity-70 disabled:hover:bg-blueGray-700 disabled:cursor-not-allowed"
+            @click="prevPage"
+            :disabled="page === 1"
+          >
+            <fa class="mr-3" :icon="['fas', 'chevron-left']" />
+            Previous
+          </button>
+          <button
+            class="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out border border-transparent rounded-md  bg-blueGray-700 hover:bg-blueGray-600 focus:outline-none focus:border-blueGray-700 focus:shadow-outline-blueGray active:bg-blueGray-700 disabled:opacity-70 disabled:hover:bg-blueGray-700 disabled:cursor-not-allowed"
+            @click="nextPage"
+            :disabled="page === Math.ceil(repos.length / perPage)"
+          >
+            Next
+            <fa class="ml-3" :icon="['fas', 'chevron-right']" />
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -63,7 +83,20 @@ export default {
     return {
       allRepos: this.repos,
       filter: null,
+      perPage: 9,
+      page: 1,
     };
+  },
+  computed: {
+    indexStart() {
+      return (this.page - 1) * this.perPage;
+    },
+    indexEnd() {
+      return this.indexStart + this.perPage;
+    },
+    paginated() {
+      return this.allRepos.slice(this.indexStart, this.indexEnd);
+    },
   },
   watch: {
     filter(value) {
@@ -71,8 +104,16 @@ export default {
     },
   },
   methods: {
+    nextPage() {
+      this.page++;
+    },
+    prevPage() {
+      this.page--;
+    },
     filterRepos(value) {
       this.allRepos = this.$_.sortBy(this.repos, value).reverse();
+      this.paginated = this.allRepos.slice(this.indexStart, this.indexEnd);
+      this.page = 1;
     },
   },
 };

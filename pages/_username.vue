@@ -17,7 +17,7 @@ export default {
       title: `GitProfile | ${this.username}`,
     };
   },
-  async asyncData({ params, redirect, $axios }) {
+  async asyncData({ params, redirect, $axios, $toast }) {
     try {
       const username = params.username;
       const profileData = await $axios
@@ -40,9 +40,11 @@ export default {
         };
       } else {
         redirect("/");
+        $toast.error("Oops...Something went wrong");
       }
     } catch (error) {
       redirect("/");
+      $toast.error(error);
     }
   },
   mounted() {},
