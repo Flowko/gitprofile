@@ -1,25 +1,20 @@
-# GitProfile
+# ⚛️ GitProfile
 
-A nicer look at your GitHub Profile! With charts!
+A nicer look at your GitHub Profile! With charts! but its made with Vuejs/Nuxtjs :)
 
-inspired from [Brittany Chiang](https://github.com/bchiang7)
+[🔗 View it here](https://gitpro.herokuapp.com/)
 
-simailar to this project [octoprofile](https://github.com/bchiang7/octoprofile) 
+👩‍🏫 inspired by [Brittany Chiang](https://github.com/bchiang7) | [octoprofile](https://github.com/bchiang7/octoprofile) 
 
-but its made with Vuejs/Nuxtjs :)
-
-![demo](https://user-images.githubusercontent.com/35883748/162595202-9df7f30d-2503-4585-9fc8-7b8d48c72676.png)
-
-[Check it Here](https://gitpro.herokuapp.com/)
-
-Built with:
+🏗️ Built with:
 
 - [Nuxtjs](https://nuxtjs.org/)
-- [Giuthub API](https://developer.github.com/v3/)
+- [Github API](https://developer.github.com/v3/)
 - [Chart.js](https://www.chartjs.org/)
+- [@nuxtjs/toast](https://www.npmjs.com/package/@nuxtjs/toast)
+- [Tailwind](https://tailwindcss.com/)
 
-And More...
-
+![demo](https://user-images.githubusercontent.com/35883748/162595202-9df7f30d-2503-4585-9fc8-7b8d48c72676.png)
 
 ## Build Setup
 
