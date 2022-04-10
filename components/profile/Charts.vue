@@ -186,6 +186,8 @@ export default {
         starred,
         "stargazers_count"
       );
+      var max = this.$_.max(this.starredData.datasets[0].data);
+      this.starredOptions.scales.yAxes[0].ticks.max = max;
     },
     starsChart() {
       var stars = this.$_.sortBy(this.repos, "stargazers_count").reverse();
